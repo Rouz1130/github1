@@ -32,6 +32,16 @@ gulp.task("minifyScripts", ["jsBrowserify"], function(){
     .pipe(gulp.dest("./build/js"));
 });
 
+gulp.task("clean", function(){
+  return del(['build', 'tmp']);
+});
+
+
+gulp.task("clean", function(){
+  return del(['build', 'tmp']);
+});
+
+
 gulp.task("build", function(){
   if (buildProduction) {
     gulp.start('minifyScripts');
