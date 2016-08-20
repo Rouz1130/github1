@@ -1,1 +1,1 @@
-var apiKey = require('./../.env').apiKey;
+var Repo = require('./../js/github.js').gitModule;
