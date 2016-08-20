@@ -82,6 +82,9 @@ gulp.task('bowerCSS', function () {
     .pipe(gulp.dest('./build/css'));
 });
 
+gulp.task('bower', ['bowerJS', 'bowerCSS']);
+
+
 gulp.task('serve', function() {
   browserSync.init({
     server: {
@@ -114,5 +117,6 @@ gulp.task('cssBuild', function() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./build/css'));
+    .pipe(gulp.dest('./build/css'))
+    .pipe(browserSync.stream());
 });
