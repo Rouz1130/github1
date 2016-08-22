@@ -8,7 +8,6 @@ var del = require('del');
 var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
-
 var lib = require('bower-files')({
   "overrides":{
     "bootstrap" : {
@@ -29,7 +28,7 @@ var buildProduction = utilities.env.production;
 
 
 gulp.task('concatInterface', function() {
-  return gulp.src(['./js/*-interface.js'])
+  return gulp.src(['./js/github-interface.js'])
     .pipe(concat('allConcat.js'))
     .pipe(gulp.dest('./tmp'));
 });
