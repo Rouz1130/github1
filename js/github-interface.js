@@ -7,6 +7,9 @@ $(document).ready(function() {
     $('#name').val("");
     alert(name);
     var repoObject = new Repo();
-    repoObject.getRepos();
+    repoObject.getRepos(name);
+    console.log(repoObject);
+
+
   });
 });
