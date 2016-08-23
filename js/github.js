@@ -12,8 +12,8 @@ Git.prototype.getGit = function(name) {
     }
 
     $('ul#repos').append("<li>" +" " + "</li");
-    $('ul#description').append("<li>" +" " + "</li");
-
+    // $('ul#description').append("<li>" +" " + "</li");
+    //put into html to show descriptions
 
 
 
